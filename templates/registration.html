@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="static/css/temp2.css" />
+</head>
+
+<body>
+    <div class="container-fluid m-lg-5 p-lg-2 mt-sm-3 p-sm-1">
+        <form action="/signup" method="post" class="register-form container-fluid col-md-6 offset-md-3 col-sm-10">
+            <h1><strong>Sign Up</strong></h1>
+            <h3>{{ message }}</h3>
+            <div class="txt">
+                <label for="email"><b>Email</b></label
+          ><br />
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+            required
+          />
+        </div>
+
+        <div class="txt">
+          <br />
+          <label for="usn"><b>Full Name</b></label><br />
+                <input type="text" placeholder="Enter Full name" name="name" id="usn" required />
+            </div>
+            <div class="txt">
+                <br />
+                <label for="usn"><b>username</b></label><br />
+                <input type="text" placeholder="Enter Full name" name="username" id="usn" required />
+            </div>
+            <div class="txt">
+                <br />
+                <label for="usn"><b>USN</b></label><br />
+                <input type="text" placeholder="Enter USN" name="usn" id="usn" required />
+            </div>
+
+            <div class="txt">
+                <br />
+                <label for="usn"><b>Enter Branch</b></label><br />
+                <input type="text" placeholder="Enter Branch" name="branch" id="usn" required />
+            </div>
+
+            <div class="txt">
+                <label for="psw"><b>Password</b></label><br />
+                <input type="password" placeholder="Enter Password" name="password" id="psw" required />
+            </div>
+
+            <p>
+                By creating an account you agree to our
+                <a href="#">Terms & Privacy</a>.
+            </p>
+            <br />
+            <button type="submit" class="btn">Sign Up</button>
+
+            <div class="signin">
+                <p>Already have an account? <a href="#">Log in</a>.</p>
+            </div>
+            <br />
+        </form>
+    </div>
+</body>
+
+</html>

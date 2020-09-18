@@ -1,0 +1,27 @@
+body{
+    
+    
+    font-family: "Nunito", sans-serif;
+}
+.header{
+    
+    margin-top: 56px;
+}
+#image-dsc{
+	padding: auto;
+}
+h5#heading{
+	margin-top:50;
+	font-weight:700;
+}
+#mainNavbar.navbar-brand{
+	font-weight:700;
+
+}
+span.inside:hover{
+
+     color:#1a75ff;
+}
+div.dropdownMenuLink{
+	background-color: white;
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile page</title>
+    <meta charset="UTF-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            background: #C5E1A5;
+        }
+        
+        form {
+            width: 60%;
+            margin: 60px auto;
+            background: #efefef;
+            padding: 60px 120px 80px 120px;
+            text-align: center;
+            -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            position: relative;
+            margin: 40px 0px;
+        }
+        
+        .label-txt {
+            position: absolute;
+            top: -1.6em;
+            padding: 10px;
+            font-family: sans-serif;
+            font-size: .8em;
+            letter-spacing: 1px;
+            color: rgb(120, 120, 120);
+            transition: ease .3s;
+        }
+        
+        .input {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+        
+        .line-box {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background: #BCBCBC;
+        }
+        
+        .line {
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #8BC34A;
+            transition: ease .6s;
+        }
+        
+        .input:focus+.line-box .line {
+            width: 100%;
+        }
+        
+        .label-active {
+            top: -3em;
+        }
+        
+        button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgb(220, 220, 220);
+            font-weight: bold;
+            color: rgb(120, 120, 120);
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: ease .3s;
+        }
+        
+        button:hover {
+            background: violet;
+            color: #611212;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function() {
+
+            $('.input').focus(function() {
+                $(this).parent().find(".label-txt").addClass('label-active');
+            });
+
+            $(".input").focusout(function() {
+                if ($(this).val() == '') {
+                    $(this).parent().find(".label-txt").removeClass('label-active');
+                };
+            });
+
+        });
+    </script>
+
+    {% include "includes/_navbar.html" %}
+    <form enctype="multipart/form-data" method="post" action="/answer">
+        <h2>1.{{q1[1]}}</h2>
+        <div>
+            <input type="radio" name="q1" value="{{q1[2]}}" /><label>a) {{q1[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="q1" value="{{q1[3]}}" /><label>a) {{q1[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="q1" value="{{q1[4]}}" /><label>a) {{q1[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="q1" value="{{q1[5]}}" /><label>a) {{q1[5]}}</label>
+        </div>
+        <div class="jumbotron" id="r1">
+
+            <h2>2.{{q2[1]}}</h2>
+            <div>
+                <input type="radio" name="q2" value="{{q2[2]}}" /><label>a) {{q2[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q2" value="{{q2[3]}}" /><label>a) {{q2[3]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q2" value="{{q2[4]}}" /><label>a) {{q2[4]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q2" value="{{q2[5]}}" /><label>a) {{q2[5]}}</label>
+            </div>
+        </div>
+        <div class="jumbotron" id="r1">
+
+            <h2>3.{{q3[1]}}</h2>
+            <div>
+                <input type="radio" name="q3" value="{{q3[2]}}" /><label>a) {{q3[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q3" value="{{q3[3]}}" /><label>a) {{q3[3]}}</label>
+            </div>
+
+            <div>
+                <input type="radio" name="q3" value="{{q3[4]}}" /><label>a) {{q3[4]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q3" value="{{q3[5]}}" /><label>a) {{q3[5]}}</label>
+            </div>
+
+        </div>
+        <div class="jumbotron" id="r1">
+
+            <h2>4.{{q4[1]}}</h2>
+            <div>
+                <input type="radio" name="q4" value="{{q4[2]}}" /><label>a) {{q4[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q4" value="{{q4[3]}}" /><label>a) {{q4[3]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q4" value="{{q4[4]}}" /><label>a) {{q4[4]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q4" value="{{q4[5]}}" /><label>a) {{q4[5]}}</label>
+            </div>
+        </div>
+        <div class="jumbotron" id="r1">
+
+            <h2>5.{{q5[1]}}</h2>
+            <div>
+                <input type="radio" name="q5" value="{{q5[2]}}" /><label>a) {{q5[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q5" value="{{q5[3]}}" /><label>a) {{q5[3]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q5" value="{{q5[4]}}" /><label>a) {{q5[4]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q5" value="{{q5[5]}}" /><label>a) {{q5[5]}}</label>
+            </div>
+        </div>
+        <div class="jumbotron" id="r1">
+
+            <h2>6.{{q6[1]}}</h2>
+            <div>
+                <input type="radio" name="q6" value="{{q6[2]}}" /><label>a) {{q6[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q6" value="{{q6[3]}}" /><label>a) {{q6[3]}}</label>
+            </div>
+
+            <div>
+                <input type="radio" name="q6" value="{{q6[4]}}" /><label>a) {{q6[4]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q6" value="{{q6[5]}}" /><label>a) {{q6[5]}}</label>
+            </div>
+        </div>
+        <div class="jumbotron" id="r1">
+
+            <h2>7.{{q7[1]}}</h2>
+
+            <div>
+                <input type="radio" name="q7" value="{{q7[2]}}" /><label>a) {{q7[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q7" value="{{q7[3]}}" /><label>a) {{q7[3]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q7" value="{{q7[3]}}" /><label>a) {{q7[3]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q7" value="{{q7[3]}}" /><label>a) {{q7[3]}}</label>
+            </div>
+        </div>
+
+        <div class="jumbotron" id="r1">
+
+            <h2>8.{{q8[1]}}</h2>
+
+            <div>
+                <input type="radio" name="q8" value="{{q8[2]}}" /><label>a) {{q8[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q8" value="{{q8[3]}}" /><label>b) {{q8[3]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q8" value="{{q8[4]}}" /><label>c) {{q8[4]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q8" value="{{q8[5]}}" /><label>d) {{q8[5]}}</label>
+            </div>
+        </div>
+        <div class="jumbotron" id="r1">
+
+            <h2>9.{{q9[1]}}</h2>
+
+            <div>
+                <input type="radio" name="q9" value="{{q9[2]}}" /><label>a) {{q9[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q9" value="{{q9[3]}}" /><label>b) {{q9[3]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q9" value="{{q9[4]}}" /><label>c) {{q9[4]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q9" value="{{q9[5]}}" /><label>d) {{q9[5]}}</label>
+            </div>
+        </div>
+
+        <div class="jumbotron" id="r1">
+
+            <h2>10.{{q10[1]}}</h2>
+
+            <div>
+                <input type="radio" name="q10" value="{{q10[2]}}" /><label>a) {{q10[2]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q10" value="{{q10[3]}}" /><label>b) {{q10[3]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q10" value="{{q10[5]}}" /><label>c) {{q10[4]}}</label>
+            </div>
+            <div>
+                <input type="radio" name="q10" value="{{q10[5]}}" /><label>d) {{q10[5]}}</label>
+            </div>
+            <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+    </form>
+
+</body>
+
+</html>

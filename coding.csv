@@ -1,0 +1,1030 @@
+,,,,,,,
+,,,,,,,
+,,,,,,,
+slno,Questions,A,B,C,D,,Answer
+6,"What will be the output of this program? If input command is
+C:\TC\BIN>prg_1 includehelp.com C C++ Java
+#include <stdio.h>
+int main(int argc,char* argv[])
+{
+    printf(""%d"",argc);
+    return 0;
+}",4,5,6,3,5,
+7,"What will be the output of this program? If input command is
+C:\TC\BIN>prg_2 1,2 ""Ok"" ""Hii"" Hello , AAA
+#include <stdio.h>
+int main(int counter,char** arg)
+{
+    unsigned char tally;
+    for(tally=0;tally< counter; tally+=1)
+        printf(""%s|"",arg[tally]);
+    return 0;
+}","C:\TC\BIN\PRG_2.EXE|1,2|Ok|Hii|Hello|,|AAA|",ERROR: Invalid argument list.,"C:\TC\BIN\PRG_2.EXE|1|,|2|Ok|Hii|Hello|,|AAA|","1,2|Ok|Hii|Hello|,|AAA|","C:\TC\BIN\PRG_2.EXE|1,2|Ok|Hii|Hello|,|AAA|",
+8,"What will be the output of this program? If input command is
+C:\TC\BIN>prg_2 Include Help .Com
+#include <stdio.h>
+int main(int argc,char** arg)
+{
+    printf(""%s"",arg[argc]);
+    return 0;
+}",(null),.Com,Help,C:\TC\BIN>prg_2.exe,(null),
+9,"What will be the output of this program? If input command is
+C:\TC\BIN>prg_3 10 20 30
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc,char* argv[])
+{
+    int answer;
+ 
+    answer=atoi(argv[1])+atoi(argv[2]);
+    printf(""%d"",answer);
+    return 0;
+}",50,60,0,30,30,
+10,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{   
+    printf(""value is = %d"",(10++));
+}",10,11,0,error,error,
+11,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{   
+	const char var='A';
+	++var;
+	printf(""%c"",var);
+}",B,A,ERROR,66,ERROR,
+12,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{   
+	int x=10;
+	x+=(x++)+(++x)+x;
+	printf(""%d"",x);
+}",44,45,46,47,45,
+13,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{   
+	int a=10,b=2,x=0;
+	x=a+b*a+10/2*a;
+	printf(""value is =%d"",x);
+}",value is =1250,value is =80,value is =125,ERROR,value is =80,
+14,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{   
+	unsigned short var='B';
+	var+=2;
+	var++;
+	printf(""var : %c , %d "", var,var);
+}","var : E, 69","var : E, 68","var : D, 68","var : D, 69","var : E, 69",
+15,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{   
+	char var=10;
+	printf(""var is = %d"",++var++);
+}",ERROR : Can not modify var.,ERROR : L-Value required.,ERROR : Expression syntax.,12,ERROR : L-Value required.,
+16,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{   
+	int x=(20 || 40 ) && (10);
+	printf(""x= %d"",x);
+}",x= 60,x= 70,x= 0,x= 1,x= 1,
+17," What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+	int x;
+	x= (printf(""AA"")||printf(""BB""));
+	printf(""%d"",x);
+	printf(""\n"");
+
+	x= (printf(""AA"")&&printf(""BB""));
+	printf(""%d"",x);
+}","AABB1
+AABB1","1
+1","AABB1
+AA1","AA1
+AABB1 ","AA1
+AABB1 ",
+18,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+   int a=3,b=2;
+   a=a==b==0;
+   printf(""%d,%d"",a,b);
+}","1,2","3,2","0,0","2,3","1,2",
+19,"What will be the output of following program ?
+#include <stdio.h>
+void main(){
+   int intVar=20,x;
+   x= ++intVar,intVar++,++intVar;
+   printf(""Value of intVar=%d, x=%d"",intVar,x);
+}","Value of intVar=23, x=21","Value of intVar=23, x=23","Value of intVar=21, x=21",ERROR,"Value of intVar=23, x=21",
+20,"What will be the output of following program ?
+#include <stdio.h>
+int main(){
+    char val=250;
+    int	 ans;
+    ans= val+ !val + ~val + ++val;
+    printf(""%d"",ans);
+    return 0;
+}",-5,-6,0,6,-6,
+21,"What will be the output of following program ?
+#include <stdio.h>
+int main(){
+   float a;
+   (int)a= 10;
+   printf(""value of a=%d"",a);
+   return 0;
+}",value of a=10,value of a=10.000000,value of a=0,L-value required.,L-value required.,
+22,"What will be the output of following program ?
+#include <stdio.h>
+int main(){
+	int x;
+	x=100,30,50;
+	printf(""x=%d\n"",x);
+	x=(100,30,50);
+	printf(""x=%d\n"",x);
+	return 0;
+}","x=100
+x=100","x=100
+x=50  ","x=50
+x=50","x=50
+x=100","x=100
+x=50 ",
+21,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+	int i=-1,j=-1,k=0,l=2,m;
+	m=i++&&j++&&k++||l++;
+	printf(""%d %d %d %d %d"",i,j,k,l,m);
+	return 0;
+}",0 0 1 2 1,0 0 1 3 2,0 0 1 3 1,0 1 1 3 1,0 0 1 3 1,
+22,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+        int var;
+        var=- -10;
+        printf(""value of var= %d\n"",var);
+        var=+ +10;
+        printf(""value of var= %d\n"",var);
+        return 0;
+}",ERROR,"value of var= -10
+value of var= 10","value of var= 10
+value of var= 10","value of var= 10
+value of var= 11","value of var= 10
+value of var= 10",
+21,"What will be the value of x and y ?
+#include <stdio.h>
+int main()
+{
+    int x,y;
+    
+    x=(100,200);
+    y=100,200;
+    
+    printf(""x=%d,y=%d"",x,y);
+
+    return 0;
+}","x=100,y=200","x=200,y=200",ERROR,"x=200,y=100","x=200,y=100",
+22,"Arrange the operators according to their precedence: +, %, ->, =","->, %, +, ="," =, +, %, ->"," %, +, =, ->","%, ->, =, +","->, %, +, =",
+23,"What will be the output of following program ?
+int main(){
+    int m=10;
+	int x=printf(""%d "",m);
+	printf(""%d"",x);
+	return 0;
+}",10 3,103,10 2,102,10 3,
+24,"What will be the output of following program ?
+int main(){
+	int x='A';
+	printf(""%02X"",x);
+	return 0;
+}",65,97,ERROR,41,41,
+25,"What will be the output of following program ?
+int main(){
+	char a=0b1010;
+	printf(""%02X"",a);
+	return 0;
+}",0A,A,0a,10,0A,
+26,"What will be the output of following program (on 32 bit compiler)?
+int main(){
+	char a=2*2+2;
+	printf(""%d"",a);
+	return 0;
+}",0,Garbage,6,8,6,
+27,"What will be the output of following program ?
+int main(){
+	unsigned char x=-1;
+	printf(""%02X"",x);
+	return 0;
+}",0xFFFFFFFF,FF,0xFF,ff,FF,
+28,"Which is the correct name of a variable?
+
+(A) -var (B) var-1 (C) _var (D) var_1",Only (A),Only (B),Both (A) and (B),Both (C) and (D),Both (C) and (D),
+29,Which special character can be used to separate two parts (words) of a variable/identifier name?,- (Hyphen),_ (Underscore),$ (Dollar),# (Hash),_ (Underscore),
+30,"What will be the result of following program?
+
+#include <stdio.h>
+int main()
+{
+	char x='AB';	
+	printf(""%c"",x);	
+	return 0;
+}",Error,Runs successfully and prints 'A' (without quote),Run with warnings and prints 'B' (without quote)  ,None of these,Run with warnings and prints 'B' (without quote)  ,
+31,"Will following string be terminated with NULL?
+
+char str[]={'H','e','l','l','o'};",YES,NO,,,NO,
+32,"Predict the output of following program.
+
+#include <stdio.h>
+
+int main()
+{
+	int (x)=10;
+	printf(""x= %d"",x);
+	
+	return 0;
+}",x= 10,x= 0,ERROR,None of these,x= 10,
+33,"Predict the output of following program.
+
+#include <stdio.h>
+
+int main()
+{
+	int i=50;
+	const int x=i++;
+	
+	printf(""x= %d"",++x);
+	
+	return 0;
+}",x= 50,x= 51,x= 52,ERROR,ERROR,
+34,"Predict the output of following program.
+
+#include <stdio.h>
+
+int main()
+{
+	int a=(10,20);
+	
+	printf(""a= %d"",a);
+	
+	return 0;
+}",a= 10,a= 20,a= 30,ERROR,a= 20,
+35,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+    printf(""includehelp.com\rOK\n"");
+    printf(""includehelp.com\b\b\bOk\n"");
+}","OK
+includehelp.ok","OK
+includehelp.okm","includehelp.com
+includehelp.okm","OKcludehelp.com
+includehelp.okm","OKcludehelp.com
+includehelp.okm",
+36,"What will be the output of following program ?
+#include <stdio.h>
+void main(){
+    unsigned char c=290;
+    printf(""%d"",c);
+}",34,290,Garbage,ERROR,34,
+37,"What will be the output of following program ?
+#include <stdio.h>
+void main(){
+    int a=0;
+    a=5||2|1;
+    printf(""%d"",a);
+}",1,7,0,8,1,
+38,"What will be the output of following program (on 32 bit compiler)?
+#include <stdio.h>
+int main(){
+    float a=125.50;
+    int   b=125.50;
+    char  c='A';
+ 
+    printf(""%d,%d,%d\n"",sizeof(a),sizeof(b),sizeof(125.50));
+    printf(""%d,%d\n"",sizeof(c),sizeof(65));
+    return 0;
+}","4,4,4
+1,4","4,4,8
+1,1","4,4,4
+1,1","4,4,8
+1,4","4,4,8
+1,4",
+39,"What will be the output of following program ?
+#include <stdio.h>
+int main(){
+    static char a;
+    static long b;
+    int c;
+ 
+    printf(""%d,%d,%d"",a,b,c);
+    return 0;
+}","0,0,0","Garbage,Garbage,Garbage","Garbage,Garbage,0","0,0,Garbage","0,0,Garbage",
+40," What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    int ok=-100;
+    -100;
+    printf(""%d"",ok);
+    return 0;
+}",100,ERROR,-100,0,-100,
+41,"What will be the output of following program ?
+#include <stdio.h>
+enum numbers
+{
+    zero, one, two, three , four=3,five,six,seven=0,eight
+};
+void main()
+{
+    printf(""%d,%d,%d,%d,%d,%d,%d,%d,%d"",zero,one,two,three,four,five,six,seven,eight);
+}","0,1,2,3,3,4,5,0,1","0,1,2,4,5,6,7,8,9","0,1,2,3,3,1,2,3,4","0,1,2,3,3,4,5,0,9","0,1,2,3,3,4,5,0,1",
+42,"What will be the output of following program ?
+#include <stdio.h>
+int main(){
+    int a,b,c;
+    a=0x10; b=010;
+    c=a+b;
+    printf(""\nAddition is= %d"",c);
+    return 0;
+}",Addition is = 20,Addition is = 24,Addition is = Garbage,ERROR,Addition is = 24,
+43,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    int var=250;
+    printf(""value of var = %d\n"",var);
+    200+50;
+    ""includehelp.com"";
+    printf(""%s\n"",""includehelp"");
+    return 0;
+}","value of var = 250
+includehelp.com","value of var = 250
+includehelp",ERROR,"value of var = 250
+Garbage","value of var = 250
+Garbage",
+44,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    int a=100;
+    printf(""%d\n""+1,a);
+    printf(""Value is = %d""+3,a);
+    return 0;
+}",ERROR,"101,
+Value is = 103","d
+ue is = 100","100
+100","d
+ue is = 100",
+45,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    extern int ok;
+    printf(""value of ok = %d"",ok);
+    return 0;
+}
+extern int ok=1000;",Declaration error,value of ok = 1000.,Linking error,value of ok = 0.,value of ok = 1000.,
+46,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    int a=23;
+    ;
+    ;printf(""%d"",a);
+    ;
+    return 0;
+}",23,ERROR,;23;,;23,23,
+47,"Find the output of this program,(program name is : static_ex.c)?
+#include <stdio.h>
+int main()
+{
+    int intVar=24;
+    static int x=intVar;
+    printf(""%d,%d"",intVar,x);
+    return 0;
+}","24,24","24,0",ERROR: Illegal Initialization,Run time error. ,ERROR: Illegal Initialization,
+48,"Find the output of this program ?(ignore the iitial numbers in the option)
+#include <stdio.h>
+int main()
+{
+    int a=15;
+    float b=1.234;
+    printf(""%*f"",a,b);
+    return 0;
+}",1.        1.234,2.         1.234000,3.           1.234000,ERROR,3.           1.234000,
+49,"Find the output of this program ?
+#include <stdio.h>
+int main()
+{
+    float a,b;
+    a=3.0f;
+    b=4.0f;
+    printf(""%.0f,%.1f,%.2f"",a/b,a/b,a/b);
+    return 0;
+}","1,0.8,0.75","0,0.7,0.75","0,0.8,0.75",ERROR: Invalid format specifier,"1,0.8,0.75",
+50,Which is the valid identifier (variable name) to store student’s age?,int student-age;,int student_age;,int -age;,int _age;,int student_age; and int _age;,
+51,"What type of declaration is it?
+    unsigned num;",num is an unsigned integer.  ,num is an unsigned character.,num is an unsigned float.  ,It’s an invalid declaration.,num is an unsigned integer.  ,
+52,Which statement does not require semicolon?,goto xyz,int x=20,#define MAX 1000,do{ ... }while(count<=100),#define MAX 1000,
+53,"What will be the answer of the code?
+
+int main()
+{
+	int a=1,b=2,c=3;
+	printf(""%d %d %d"");
+	return 0;
+}",Garbage value,compile_time Error,3 2 2001,None of above,Garbage value,
+54," What will be the answer of the code?
+
+#define print  ""%sincludehelp ""
+int main()
+{
+	int a=1,b=2,c=3;
+	printf(print,print);
+	return 0;
+}",Garbage value,includehelp %sincludehelp,%sincludehelp includehelp,None of the above,%sincludehelp includehelp,
+55,"What will be the output?
+
+int main()
+{
+	int a=34;
+	printf(""%d %i %p %n"",a,a,a,a);
+	return 0;
+}", 34 34 00 22,compilation error,34,None of these.,compilation error,
+56,"What will be the output?
+
+int main()
+{
+	char *str=""includehelp"";
+	printf(""%s"",str+7);
+	return 0;
+}",help,includehelp ,ehelp,None of these.,help,
+57,"What will be the output?
+
+int main()
+{
+	printf(""%d"",printf(""includehelp""));
+	return 0;
+}",11includehelp,includehelp11,compile_time error,None of these.,includehelp11,
+58,"What will be the output?
+
+int main()
+{
+	int n=0;
+	while(n<printf(""MENU\n""))
+	{
+		n++;
+	}
+	return 0;
+}","MENU
+MENU
+MENU
+MENU
+MENU
+MENU","MENU
+MENU
+MENU
+MENU
+MENU",compile_time error,None of these.,"MENU
+MENU
+MENU
+MENU
+MENU
+MENU",
+59,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    char    *str=""IncludeHelp"";
+    printf(""%c\n"",*&*str);
+    return 0;
+}",Error,IncludeHelp,I,*I,I,
+60,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    int     iVal;
+    char    cVal;
+    void    *ptr;   // void pointer
+    iVal=50; cVal=65;
+ 
+    ptr=&iVal;
+    printf(""value =%d,size= %d\n"",*(int*)ptr,sizeof(ptr));
+     
+    ptr=&cVal;
+    printf(""value =%d,size= %d\n"",*(char*)ptr,sizeof(ptr));
+    return 0;
+}",Error,"value =50,size= 4
+value =65,size= 4","value =50,size= 4
+value =65,size= 1",Garbage Values,"value =50,size= 4
+value =65,size= 4",
+61,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    int a=10,b=2;
+    int *pa=&a,*pb=&b;
+    printf(""value = %d"", *pa/*pb);
+    return 0;
+}",5,5,ERROR,None of these.,ERROR,
+62,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    static int var[5];
+    int count=0;
+     
+    var[++count]=++count;
+    for(count=0;count<5;count++)
+        printf(""%d "",var[count]);
+     
+    return 0;
+}",0 1 0 0 0,0 2 0 0 0,0 0 2 0 0,0 0 0 0 0,0 0 0 0 0,
+63,"What will be the output of following program ? (for 32 bits compiler)
+#include <stdio.h>
+int main()
+{
+    int MAX=10;
+    int array[MAX];
+    printf(""size of array is = %d"",sizeof(array);
+    return 0;
+}",size of array is = 20,size of array is = 40,size of array is = 4,ERROR,size of array is = 40,
+64,"What will be the output of following program ?
+#include <stdio.h>
+#define MAX 10
+int main()
+{   int array[MAX]={1,2,3},tally;
+    for(tally=0;tally< sizeof(array)/sizeof(int);tally+=1)
+        printf(""%d "",*(tally+array));
+    return 0;
+}",ERROR,1 3 4 5 6 7 8 9 10 11,1 2 3 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 0,1 2 3 0 0 0 0 0 0 0,
+65,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{   static int x[]={'A','B','C','D','E'},tally;
+    for(tally=0;tally< sizeof(x)/sizeof(int) ; tally+=1)
+        printf(""%c,%c,%c\n"",*(x+tally)+1,x[tally]+1,*(tally+x)+1);
+    return 0;
+}",ERROR,"A,A,A
+B,B,B
+C,C,C
+D,D,D
+E,E,E","B,B,B
+C,C,C
+D,D,D
+E,E,E
+F,F,F","E,E,E
+D,D,D
+C,C,C
+B,B,B
+A,A,A","B,B,B
+C,C,C
+D,D,D
+E,E,E
+F,F,F",
+66,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{   static int array[]={10,20,30,40,50};
+    printf(""%d...%d"",*array,*(array+3)* *array);
+    return 0;
+}",ERROR,10...40,10...300,10....400,10....400,
+67,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{   int a[5]={1,2,3,4,5},b[5]={10,20,30,40,50},tally;
+     
+    for(tally=0;tally< 5;++tally)
+        *(a+tally)=*(tally+a)+ *(b+tally);
+     
+    for(tally=0;tally< 5;tally++)
+        printf(""%d "",*(a+tally));
+ 
+    return 0;
+}",1 2 3 4 5,10 20 30 40 50,11 22 33 44 55,Error,11 22 33 44 55,
+68,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{   int a[5]={0x00,0x01,0x02,0x03,0x04},i;
+    i=4;
+    while(a[i])
+    {
+        printf(""%02d  "",*a+i);
+        --i;
+    }
+    return 0;
+}",00 01 02 03 04,04 03 02 01 00,04 03 02 01,01 02 03 04,04 03 02 01,
+69,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    char X[10]={'A'},i;
+    for(i=0; i<10; i++)
+        printf(""%d "",X[i]);
+    return 0;
+}",A 0 0 0 0 0 0 0 0 0,A,A 32 32 32 32 32 32 32 32 32, ERROR,A 0 0 0 0 0 0 0 0 0,
+70,Which is an incorrect declaration of one dimensional array ?,int x[5];,"int x[5]={1,2,3,4,5};","int x[5]={1,2};",int x[];,int x[];,
+71,"What will be the output of following program ?
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int val=0;
+    char str[]=""IncludeHelp.Com"";
+ 
+    val=strcmp(str,""includehelp.com"");
+    printf(""%d"",val);   
+    return 0;
+}",0,1,-1,ERROR,-1,
+72,"What will be the output of following program ?
+#include <stdio.h>
+#include <string.h>
+ 
+int main()
+{
+    char str[];
+    strcpy(str,""Hello"");
+    printf(""%s"",str);
+    return 0;
+}",Hello,ERROR,No Output,NULL,ERROR,
+73,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    char str[8]=""IncludeHelp"";
+    printf(""%s"",str);
+    return 0;
+}",IncludeHelp,IncludeH,Error,No Output,Error,
+74,"What will be the output of following program ?
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str1[]=""IncludeHelp"",str2[]="".Com"";
+    printf(""%s"",str1+strlen(str2));
+    return 0;
+}",IncludeHelp.Com,udeHelp,Error,IncludeHelp4,udeHelp,
+75,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    char str[]=""Hello%s%dFriends"";
+    printf(str);
+    printf(""\n"");
+    printf(""%s"",str);
+    return 0;
+}","HelloFriends
+HelloFriends","Hello%s%dFriends
+Hello%s%dFriends","Hello(null)0Friends
+Hello%s%dFriends",Garbage Values,"Hello(null)0Friends
+Hello%s%dFriends",
+76,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    char str[]=""value is =%d"";
+    int a='7';
+    str[11]='c';
+    printf(str,a);
+    return 0;
+}",value is =%d,value is =%c,value is =55,value is =7,value is =7,
+77,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    char result,str[]=""\0IncludeHelp"";
+    result=printf(""%s"",str);
+    if(result)
+        printf(""TRUE"");
+    else
+        printf(""FALSE"");
+    return 0;
+}",\0IncludeHelpTRUE,\0IncludeHelpFALSE,Error,FALSE,FALSE,
+78,"What will be the output of following program ?
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    if( printf(""Hello"") == strlen(""Hello"") )
+        printf(""...Friends"");
+    else
+        printf(""...Enemies"");
+    return 0;
+}",Hello...Friends,Hello...Enemies,...Friends,...Enemies,Hello...Friends,
+79,"What will be the output of following program ?
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char s1[]=""IncludeHelp"";
+    char s2[10];
+     
+    strncpy(s2,s1,5);
+    printf(""%s"",s2);
+    return 0;
+}",Inclu,IncluGARBAGE_VALUE,Error,IncludeHelp,IncluGARBAGE_VALUE,
+80,"What will be the output of following program ?
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[50]=""IncludeHelp"";
+    printf(""%d...%d"",strlen(str),sizeof(str));
+    return 0;
+}",50...50,11...50,11...11,50...11,11...50,
+81,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    char *str=""IncludeHelp"";
+    while(*str)
+        printf(""%s\n"",str++);
+    return 0;
+}","IncludeHelp
+IncludeHel
+IncludeHe
+..
+I","IncludeHelp
+ncludeHelp
+cludeHelp
+..
+P",ERROR,IncludeHelp,"IncludeHelp
+ncludeHelp
+cludeHelp
+..
+P",
+82,"What will be the output of following program ?
+#include <stdio.h>
+#define string char*
+int main()
+{
+    string myName=""IncludeHelp"";
+    printf(""My name is =%s"",myName);
+    return 0;
+}",IncludeHelp,Error,char*,myName,IncludeHelp,
+83,"What will be the output of following program ?
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    printf(""%d...%d"",sizeof(""Hello""),strlen(""Hello""));
+    return 0;
+}",5...5,6...6,5...6,6...5,6...5,
+84,"What will be the output of following program ?
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str[]=""Ihelp"";
+ 
+    while(str+strlen(str))
+        printf(""*"");
+    return 0;
+}",ERROR,No output,***... infinite times,*,***... infinite times,
+85,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{  
+    int a=10;
+    switch(a){
+        case 5+5:
+            printf(""Hello\n"");
+        default:
+            printf(""OK\n"");
+    }
+}",Hello,OK,"Hello
+OK",Error,"Hello
+OK",
+86,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{  
+    int a=2;
+    switch(a)
+    {
+        printf(""Message\n"");
+        default:
+            printf(""Default\n"");
+        case 2:
+            printf(""Case-2\n"");
+        case 3:
+            printf(""Case-3\n"");
+    }
+    printf(""Exit from switch\n"");
+}",Case-2,Message,"Message
+Case-2","Case-2
+Case-3
+Exit from switch","Case-2
+Case-3
+Exit from switch",
+87,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+    int a=2;
+    int b=a;
+ 
+    switch(b)
+    {
+        case a:
+            printf(""Case-a\n"");     break;
+        case 3:
+            printf(""Case-3\n"");     break;
+        default:
+            printf(""No option\n"");  break;
+    }
+    printf(""Exit from switch"");
+}",Case-2,Error: case expression not constant.,"Message
+Case-2","Case-2
+Case-3
+Exit from switch",Error: case expression not constant.,
+88,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+    short day=2;
+    switch(day)
+    {
+        case 2: || case 22: 
+            printf(""%d nd"",day);
+        break;
+        default:
+            printf(""%d th"",day);
+        break;  
+    }
+}",2 nd,22 nd,Error,"2 nd
+22 nd",Error,
+89,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+    short a=2;
+    switch(a)
+    {
+        case 1L:
+            printf(""One\n""); 
+            break;
+        case 2L:
+            printf(""Two\n""); 
+            break;
+        default:
+            printf(""Else\n"");
+            break;
+    }
+}",One,Two,Else,Error,Two,
+90,"What will be the output of following program ?
+#include <stdio.h>
+void main(){
+     static int staticVar;
+     int j;
+     for(j=0;j<=5;j+=2)
+     switch(j){
+        case 1: 
+            staticVar++;
+            break;
+        case 2: 
+            staticVar+=2;
+        case 4: 
+            staticVar%=2;
+            j=-1;
+            continue;
+        default: 
+            --staticVar;
+            continue;
+     }
+     printf(""%d"",staticVar); 
+}",0,1,2,ERROR,0,
+91,"What will be the output of following program ?
+#include <stdio.h>
+void main()
+{
+    int a=2;
+    switch(a/2*1.5)
+    {
+        case 1:
+            printf(""One..."");
+            break;
+        case 2:
+            printf(""Two..."");
+            break;
+        default:
+            printf(""Other..."");
+            break;
+    }
+}",One...,Two...,Other...,ERROR,ERROR,
+92,"What will be the output of following program ?
+#include <stdio.h>
+void main(){
+    int a=1;
+    switch(a/2)
+    {
+        case NULL:
+            printf(""Case NULL\n"");
+            break;
+        case 0: 
+            printf(""Case ZERO\n"");
+            break;
+        default: 
+            printf(""DEFAULT\n"");
+            break;
+    } 
+}",Case NULL,Case Zero,Case Default,ERROR,ERROR,
+93,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+    int i;
+    for(i=0; i< 5; i++)
+    {
+        if(i*i > 30 )
+            goto lbl;
+        else
+            printf(""%d"",i);
+    lbl:
+        printf(""IHelp "");
+ 
+    }
+    return 0;
+}",0IHelp 1IHelp 2IHelp 3IHelp 4IHelp,0IHelp 2IHelp 4IHelp,IHelp,ERROR,0IHelp 1IHelp 2IHelp 3IHelp 4IHelp,
+94,"What will be the output of following program ?
+#include <stdio.h>
+#define TRUE 1
+int main()
+{
+    switch(TRUE)
+    {   
+        printf(""Hello"");
+    }
+}",Hello,ERROR,No Output,"Garbage Value",No Output,
+95,"Can we use string value/variable in switch test condition?
+switch(test_expression)
+{
+    case VALUE1:
+    case VALUE2:
+    case VALUE3:
+        /*statements block 1*/
+        break;
+    case VALUE4:
+    case VALUE5:
+        /*statements block 2*/
+        break;
+}",Yes,No,,,No,
+96,"Can we use string value/variable in switch test condition?
+#include <stdio.h>
+int main()
+{
+    int x;
+    float y=7.0;
+    switch(x=y+1)
+    {
+        case 8: printf(""It's Eight.""); break;
+        default: printf(""Oops No choice here!!!"");
+    }
+}",Error,Oops No choice here!!!,It's Eight.Oops No choice here!!!,It's Eight.,It's Eight.,
+97,"What will be the output of following program ?
+#include <stdio.h>
+int main()
+{
+#ifdef debug
+    printf(""Start debugging..."");
+#endif
+    printf(""IncludeHelp"");
+    return 0;
+}",Start debugging...IncludeHelp,IncludeHelp,Error,debug,IncludeHelp,
+98,"What will be the output of following program ?
+#include <stdio.h>
+#define MAX 100
+int main()
+{
+#define MAX 20
+printf(""MAX=%d..."",MAX);
+return 0;
+}",Error,MAx=100...,MAx=20...,MAX=10020,MAx=20...,
+99,"What will be the output of following program ?
+#include <stdio.h>
+#define FUN(x)  x*x
+int main()
+{
+int val=0;
+val=128/FUN(8);
+printf(""val=%d"",val);
+return 0;
+}",2,128,64,1,128,
+100,"What will be the output of following program ?
+#include <stdio.h>
+#define FUN(x,y)    x##y
+int main()
+{
+int a1=10,a2=20;
+printf(""%d...%d"",FUN(a,1),FUN(a,2));
+return 0;
+}",Error,10...10,20...20,10...20,10...20,

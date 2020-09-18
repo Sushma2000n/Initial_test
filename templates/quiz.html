@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style type="text/css">
+        /* body{
+
+			
+			
+		} */
+        
+        .jumbotron {
+            font-family: tahoma;
+            font-size: 20px;
+            text-shadow: .5px 0px black;
+        }
+        
+        #perguntatitulo {
+            text-align: center;
+            color: rgb(24, 201, 125);
+            text-shadow: 1px 1px black;
+            text-transform: uppercase;
+        }
+        
+        #pq1,
+        #pq2,
+        #pq3,
+        #pq4,
+        #pq5 {
+            color: rgb(62, 34, 13);
+        }
+        
+        #r1 {
+            color: rgb(68, 188, 216);
+        }
+        
+        #DivNome {
+            color: rgb(25, 121, 169);
+            font-size: 40px
+        }
+        
+        #paginainicial {
+            text-shadow: 1px 1px black;
+            text-decoration: none;
+            padding-bottom: 20px;
+            text-align: center;
+            font-size: 19px;
+        }
+    </style>
+    <title>Questions 1 </title>
+</head>
+{% include "includes/_navbar.html" %}
+
+
+<body class="container">
+
+    <header>
+        <div>
+            <h3>Welcome {{name}}!!!</h3>
+        </div>
+        <h1 id="perguntatitulo">DSC-TOCE Test Series</h1>
+    </header>
+    <div class="jumbotron" id="r1">
+
+        <h2>1.{{q1[1]}}</h2>
+        <div>
+            <input type="radio" name="gender" value="{{q1[2]}}" /><label>a) {{q1[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q1[3]}}" /><label>a) {{q1[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q1[4]}}" /><label>a) {{q1[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q1[5]}}" /><label>a) {{q1[5]}}</label>
+        </div>
+    </div>
+    <div class="jumbotron" id="r1">
+
+        <h2>2.{{q2[1]}}</h2>
+        <div>
+            <input type="radio" name="gender" value="{{q2[2]}}" /><label>a) {{q2[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q2[3]}}" /><label>a) {{q2[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q2[4]}}" /><label>a) {{q2[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q2[5]}}" /><label>a) {{q2[5]}}</label>
+        </div>
+    </div>
+    <div class="jumbotron" id="r1">
+
+        <h2>3.{{q3[1]}}</h2>
+        <div>
+            <input type="radio" name="gender" value="{{q3[2]}}" /><label>a) {{q3[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q3[3]}}" /><label>a) {{q3[3]}}</label>
+        </div>
+
+        <div>
+            <input type="radio" name="gender" value="{{q3[4]}}" /><label>a) {{q3[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q3[5]}}" /><label>a) {{q3[5]}}</label>
+        </div>
+
+    </div>
+    <div class="jumbotron" id="r1">
+
+        <h2>4.{{q4[1]}}</h2>
+        <div>
+            <input type="radio" name="gender" value="{{q4[2]}}" /><label>a) {{q4[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q4[3]}}" /><label>a) {{q4[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q4[4]}}" /><label>a) {{q2[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q4[5]}}" /><label>a) {{q4[5]}}</label>
+        </div>
+    </div>
+    <div class="jumbotron" id="r1">
+
+        <h2>5.{{q5[1]}}</h2>
+        <div>
+            <input type="radio" name="gender" value="{{q5[2]}}" /><label>a) {{q5[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q5[3]}}" /><label>a) {{q5[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q5[4]}}" /><label>a) {{q5[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q5[5]}}" /><label>a) {{q5[5]}}</label>
+        </div>
+    </div>
+    <div class="jumbotron" id="r1">
+
+        <h2>6.{{q6[1]}}</h2>
+        <div>
+            <input type="radio" name="gender" value="{{q6[2]}}" /><label>a) {{q6[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q6[3]}}" /><label>a) {{q6[3]}}</label>
+        </div>
+
+        <div>
+            <input type="radio" name="gender" value="{{q6[4]}}" /><label>a) {{q6[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q6[5]}}" /><label>a) {{q6[5]}}</label>
+        </div>
+    </div>
+    <div class="jumbotron" id="r1">
+
+        <h2>7.{{q7[1]}}</h2>
+
+        <div>
+            <input type="radio" name="gender" value="{{q7[2]}}" /><label>a) {{q7[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q7[3]}}" /><label>a) {{q7[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q7[3]}}" /><label>a) {{q7[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q7[3]}}" /><label>a) {{q7[3]}}</label>
+        </div>
+    </div>
+
+    <div class="jumbotron" id="r1">
+
+        <h2>8.{{q8[1]}}</h2>
+
+        <div>
+            <input type="radio" name="gender" value="{{q8[2]}}" /><label>a) {{q8[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q8[3]}}" /><label>b) {{q8[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q8[4]}}" /><label>c) {{q8[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q8[5]}}" /><label>d) {{q8[5]}}</label>
+        </div>
+    </div>
+    <div class="jumbotron" id="r1">
+
+        <h2>9.{{q9[1]}}</h2>
+
+        <div>
+            <input type="radio" name="gender" value="{{q9[2]}}" /><label>a) {{q9[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q9[3]}}" /><label>b) {{q9[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q9[4]}}" /><label>c) {{q9[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q9[5]}}" /><label>d) {{q9[5]}}</label>
+        </div>
+    </div>
+
+    <div class="jumbotron" id="r1">
+
+        <h2>10.{{q10[1]}}</h2>
+
+        <div>
+            <input type="radio" name="gender" value="{{q10[2]}}" /><label>a) {{q10[2]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q10[3]}}" /><label>b) {{q10[3]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q10[5]}}" /><label>c) {{q10[4]}}</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="{{q10[5]}}" /><label>d) {{q10[5]}}</label>
+        </div>
+    </div>
+    <br>
+    <input type="button" value="Confira a sua Pontuação" onclick="calcula()" class="btn btn-success btn-lg btn-block">
+
+    <hr>
+    <br>
+
+
+</body>
+
+</html>

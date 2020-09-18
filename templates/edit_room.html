@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Chat App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .harsha {
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);">
+    <h1 class="harsha">Edit Room</h1>
+    <br>
+    <div class="center">
+        <h3>{{ message }}</h3>
+        <form method="post">
+            <label>Room Name:</label>
+            <input type="text" name="room_name" value="{{ room.name }}">
+            <br>
+            <label>Members:</label>
+            <input type="text" name="members" value="{{ room_members_str }}">
+            <br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+    </form>
+</body>
+
+</html>
